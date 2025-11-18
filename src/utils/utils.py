@@ -1,0 +1,34 @@
+#contains Common utilities
+# Setting Headers
+# read data from Excel, CSV, JSON file
+# set the headers - application/json, application/xml
+
+class utils(object):
+
+    def common_headers_json(self):
+        headers = {
+            "Content-Type" : "application/json"
+        }
+        return headers
+
+    def common_headers_xml(self):
+        headers = {
+            "Content-Type" : "application/xml"
+        }
+        return headers
+
+    def common_header_put_delete_patch_cookie(self, token):
+        headers = {
+            "Content-Type" : "application/json",
+            "Cookie" : "token" + str(token)
+        }
+        return headers
+
+    def read_csv_file(self):
+        pass
+
+    def read_env_file(self):
+        pass
+
+    def read_database_file(self):
+        pass
